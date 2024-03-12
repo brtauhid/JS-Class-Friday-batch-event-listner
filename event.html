@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Listner</title>
+</head>
+<body>
+        <!-- <h1 onclick="console.log(83)">This is DOM Event</h1>
+        <button onclick="console.log('Click me button clicked')">Click Me</button>
+        <button onclick="console.log(50)">Another Button</button> -->
+            <p>Lorem ipsum dolor sit amet.</p>
+        <button id="make-blue">Make blue</button>
+        <button id="make-green">Make green</button>
+        <button id="make-pink">Make pink</button>
+        <button id="make-violet">Make violet</button>
+        <button id="make-brown">Make brown</button>
+
+
+
+<script>
+
+//Making Blue Background
+const makeBlueButton = document.getElementById('make-blue');
+            makeBlueButton.onclick = makeBlue;
+
+function makeBlue() {
+    document.body.style.backgroundColor = 'blue';
+}
+
+// Making Green background
+const makeGreenButton = document.getElementById('make-green');
+            makeGreenButton.onclick = makeGreen;
+
+function makeGreen() {
+    document.body.style.backgroundColor = 'green';
+}
+
+// Using event listner
+const pinkButton = document.getElementById('make-pink');
+pinkButton.addEventListener('click', makePink);
+
+function makePink() {
+    document.body.style.backgroundColor = 'pink';
+}
+
+// Using event listner directly
+document.getElementById('make-violet').addEventListener('click', makeViolet);
+
+function makeViolet() {
+    document.body.style.backgroundColor = 'violet';
+}
+
+//Final
+document.getElementById('make-brown').addEventListener('click', function () {
+    document.body.style.backgroundColor = 'brown';
+    document.body.style.fontSize = '30px';
+});
+
+
+
+
+</script>
+</body>
+</html>
